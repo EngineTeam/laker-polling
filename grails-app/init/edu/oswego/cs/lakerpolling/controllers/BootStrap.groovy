@@ -7,8 +7,8 @@ import edu.oswego.cs.lakerpolling.domains.User
 import edu.oswego.cs.lakerpolling.util.RoleType
 
 class BootStrap {
-
     def init = { servletContext ->
+
 
         /* Define students */
         User a = new User(firstName: "Jason", lastName: "Parker", email: "jpark@gmail.com", imageUrl: "Some image")
