@@ -11,11 +11,11 @@ class User {
     String imageUrl
 
     static hasOne = [authToken: AuthToken, role: Role]
+    static hasMany = [course: Course]
 
     static hasMany = [attendance: Attendee, answers: Answer]
 
     static mapping = {
-        table "users"
         version false
     }
 
