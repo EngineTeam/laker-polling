@@ -23,6 +23,15 @@ class BootStrap {
         lefebvre.setRole(new Role(type: RoleType.INSTRUCTOR, master: RoleType.INSTRUCTOR))
         lefebvre.save(flush: true)
 
+        User jolanda = new User(email: "jolanda.tromp@oswego.edu")
+        jolanda.setRole(new Role(type: RoleType.INSTRUCTOR, master: RoleType.INSTRUCTOR))
+        jolanda.save(flush: true)
+
+        User ulises = new User(email: "ulises.mejias@oswego.edu")
+        ulises.setRole(new Role(type: RoleType.INSTRUCTOR, master: RoleType.INSTRUCTOR))
+        ulises.save(flush: true)
+
+
         /*End instructors*/
     }
 

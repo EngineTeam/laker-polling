@@ -53,17 +53,17 @@ var courseId
         }
 
         this.getQuizGradesById = function(id, onSuccess, onFail) {
-            _instructor.getTokenOrFetch((token) => {
-                var urlString = '/api/quiz/grades?access_token=' + token + '&quiz_id=' + id;
-                NetworkUtils.runAjax(urlString, 'GET', function(data){
-                    if (!ArrayUtils.isArray(data.grades)) {
-                        return onFail(new Error("Could not find grades by that "))
-                    }
-                    onSuccess(data.grades)
-                }, function(err){
-                    onFail(err)
-                })
-            }, onFail)
+//            _instructor.getTokenOrFetch((token) => {
+//                var urlString = '/api/quiz/grades?access_token=' + token + '&quiz_id=' + id;
+//                NetworkUtils.runAjax(urlString, 'GET', function(data){
+//                    if (!ArrayUtils.isArray(data.grades)) {
+//                        return onFail(new Error("Could not find grades by that "))
+//                    }
+//                    onSuccess(data.grades)
+//                }, function(err){
+//                    onFail(err)
+//                })
+//            }, onFail)
         }
     }
 
