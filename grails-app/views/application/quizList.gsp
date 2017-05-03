@@ -174,7 +174,8 @@
 
 <script type="text/javascript">
     $('.clockpicker').clockpicker({
-        autoclose: true
+        autoclose: true,
+        twelvehour: true
     });
 </script>
 
