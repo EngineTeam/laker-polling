@@ -34,7 +34,7 @@ class AuthController {
             if (optionalInfo.isPresent()) {
                 Pair<User, AuthToken> info = optionalInfo.get()
                 session.setAttribute("access", info.value.accessToken)
-                render(view: 'authUser', model : [token : info.value])
+                render(view: 'authUser', model: [token: info.value])
             } else {
                 render(view: '../error')
             }
@@ -63,7 +63,7 @@ class AuthController {
             session.removeAttribute("access")
         }
         session.invalidate()
-        render(view: 'logout')
+        redirect(controller: 'application', action: 'landing')
     }
 
 }
