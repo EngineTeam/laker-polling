@@ -38,6 +38,9 @@
                     %{--<button onclick="logout()" class="btn btn-default navbar-right navbar-btn">Logout</button>--}%
                     <a class="logout" onclick="logout()" >LogOut</a>
                 </li>
+                <li style="border: 0px solid #fed136">
+                    <a href="/dashboard/help" style="cursor: pointer">help</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

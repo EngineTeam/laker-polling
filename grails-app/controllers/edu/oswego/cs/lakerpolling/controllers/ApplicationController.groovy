@@ -35,6 +35,28 @@ class ApplicationController {
         }
     }
 
+    def helpStudentView() {
+        QueryResult<AuthToken> require = hasAccess()
+        if (require.success) {
+            User user = require.data.user
+            RoleType type = user.role.type
+            if (type == RoleType.STUDENT) {
+                render(view: 'studHelpPage')
+            } else if (type == RoleType.INSTRUCTOR) {
+                render(view: 'instructorHelpPage')
+            }
+//            } else if (type == RoleType.ADMIN) {
+//                render(view: 'dashboardAdmin')
+//            }
+        else {
+                session.invalidate()
+                redirect(controller: 'application', action: 'landing')
+            }
+        } else {
+            session.invalidate()
+            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+        }
+    }
     def courseView(long courseId) {
         QueryResult<AuthToken> require = hasAccess()
         if(require.success) {
@@ -206,6 +228,7 @@ class ApplicationController {
             render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
         }
     }
+
 
     private QueryResult<AuthToken> hasAccess() {
         String access = session.getAttribute("access")
