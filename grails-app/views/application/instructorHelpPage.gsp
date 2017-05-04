@@ -14,7 +14,6 @@
 </head>
 <style>
 #content {
-    margin-top: 8%;
     align-self: center;
 }
 
@@ -30,7 +29,6 @@ hr {
 a.anchor {
     display: block;
     position: relative;
-    top: -160px;
     visibility: hidden;
 }
 
@@ -53,7 +51,7 @@ a.anchor {
             </button>
 
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="/dashboard">
                     %{--<span>    <asset:image src="logo2.png" class="logo"/></a></span>--}%
                     %{--Laker Polling--}%
                     <span><asset:image src="logo2.png" class="logo"/></span>
@@ -65,15 +63,25 @@ a.anchor {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="logout" onclick="logout()" >LogOut</a>
+                </li>
                 <!--<li class="active"><a href="#">Home</a></li>-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Useful Campus Links <span class="caret"></span></a>
+                       aria-expanded="false">Help Links<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="https://www.oswego.edu/" target="_blank">Suny Oswego Home</a></li>
-                        <li><a href="https://www.oswego.edu/blackboard/" target="_blank">Blackboard</a></li>
-                        <li><a href="https://lakerlife.oswego.edu/" target="_blank">Laker Life</a></li>
-                        <li><a href="https://www.oswego.edu/myoswego/" target="_blank">My Oswego</a></li>
+                         <li><a href="#1">Accessing Laker Polling Application</a></li> 
+                        <li><a href="#2">Log in</a></li> 
+                        <li><a href="#3">Logout</a></li> 
+                        <li><a href="#4">Switch to student view</a></li> 
+                        <li><a href="#5">Add another instructor</a></li> 
+                        <li><a href="#6">Create a course</a></li> 
+                        <li><a href="#7">Add students to a course</a></li>
+                         <li><a href="#8">Run a live poll</a></li> 
+                        <li><a href="#9">Create an online quiz</a></li> 
+                        <li><a href="#10">Check/download grades</a></li>
+                         <li><a href="#11">Check/download attendance</a></li>
                     </ul>
                 </li>
             </ul>
@@ -81,31 +89,11 @@ a.anchor {
         </div>
         <!-- /.navbar-collapse -->
     </div> 
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" data-target="#links"
-            style="width: 100%;
-            margin-top: 2%;font-size:x-large;color:white;background-color: #3c763d">Help Links<span
-            class="caret"></span></button>
-
-    <div id="links" style="background: #ffffff;;width: 100%;">
-        <ul class="dropdown-menu" style="width:100%">
-             <li><a href="#1">Accessing Laker Polling Application</a></li> 
-            <li><a href="#2">Log in</a></li> 
-            <li><a href="#3">Logout</a></li> 
-            <li><a href="#4">Switch to student view</a></li> 
-            <li><a href="#5">Add another instructor</a></li> 
-            <li><a href="#6">Create a course</a></li> 
-            <li><a href="#7">Add students to a course</a></li>
-             <li><a href="#8">Run a live poll</a></li> 
-            <li><a href="#9">Create an online quiz</a></li> 
-            <li><a href="#10">Check/download grades</a></li>
-             <li><a href="#11">Check/download attendance</a></li>
-             </ul>
-    </div>
     <!-- /.container -->
 </nav>
-
+<section>
 <div id="content" style="width: 100%;">
-    <div style="width: 90%;padding-left: 10%;padding-top: 14%"> 
+    <div style="width: 90%;padding-left: 10%;"> 
         <a class="anchor" name="1"></a>
 
         <h3>Accessing Laker Polling Application</h3> 
@@ -260,7 +248,7 @@ a.anchor {
 
     </div>
 </div>
-
+</section>
 <footer>
     <p>Copyright (c) 2017</p>
 

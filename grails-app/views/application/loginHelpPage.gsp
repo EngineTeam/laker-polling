@@ -14,7 +14,6 @@
 </head>
 <style>
 #content {
-
     align-self: center;
 }
 
@@ -52,7 +51,7 @@ a.anchor {
             </button>
 
             <div class="navbar-header">
-                <a class="navbar-brand" href="/dashboard">
+                <a class="navbar-brand" href="/">
                     %{--<span>    <asset:image src="logo2.png" class="logo"/></a></span>--}%
                     %{--Laker Polling--}%
                     <span><asset:image src="logo2.png" class="logo"/></span>
@@ -65,24 +64,13 @@ a.anchor {
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="nav navbar-nav navbar-right">
                 <!--<li class="active"><a href="#">Home</a></li>-->
-                <li>
-                    %{--<button onclick="logout()" class="btn btn-default navbar-right navbar-btn">Logout</button>--}%
-                    <a class="logout" onclick="logout()" >LogOut</a>
-                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Help Links <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <!--<li><a href="https://www.oswego.edu/" target="_blank">Suny Oswego Home</a></li>
-                        <li><a href="https://www.oswego.edu/blackboard/" target="_blank">Blackboard</a></li>
-                        <li><a href="https://lakerlife.oswego.edu/" target="_blank">Laker Life</a></li>
-                        <li><a href="https://www.oswego.edu/myoswego/" target="_blank">My Oswego</a></li>-->
                         <li><a href="#1">Accessing Laker Polling Application</a></li>
-             <li><a href="#2">Log in</a></li> 
-            <li><a href="#3">Logout</a></li>
-             <li><a href="#4">Navigate Student Dashboard</a></li>
-             <li><a href="#5">Participate in a Polling Session</a></li> 
-            <li><a href="#6">Take an Online Quiz</a></li>
+                         <li><a href="#2">Log in</a></li> 
+                        <li><a href="#3">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -90,11 +78,12 @@ a.anchor {
         </div>
         <!-- /.navbar-collapse -->
     </div> 
+    <!-- /.container -->
 </nav>
 
 <section>
 <div id="content" style="width: 100%;">
-    <div style="width: 90%;padding-left: 10%"> 
+    <div style="width: 90%;padding-left: 10%;"> 
 
         <a class="anchor" name="1"></a>
 
@@ -135,48 +124,7 @@ a.anchor {
          border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
         <br><hr><br>  
 
-        <a class="anchor" name="4"></a>
 
-        <h3>Navigate Student Dashboard</h3> 
-        <p>On your student dashboard, you will see the courses that you are enrolled in that are utilizing Laker Polling.
-                 When you select a specific course, you will be brought to a course landing page for that course that will
-                 display any active polls that you have in the class. If you are not enrolled in any classes that are utilizing 
-        the Laker Polling application, you will see a message stating ”you are not enrolled in any courses”.</p>
-         <div style="text-align: center"><asset:image src="HelpImages/Student/Dashboard/1.png" style="height:70%;width:70%;
-         border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
-        <br><hr><br>  
-
-        <a class="anchor" name="5"></a>
-
-        <h3>Participate in a Polling Session (in class)</h3>
-                 <p>To enter a polling session, click on the active poll button displayed on your course landing page.</p> 
-        <div style="text-align: center"><asset:image src="HelpImages/Student/Polling/1.png" style="height:70%;width:70%;
-         border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
-
-        <p>You will automatically be brought to the open polling session. Your professor will have the question 
-        and answer options projected from his/hers in class powerpoint.</p> 
-        <div style="text-align: center"><asset:image src="HelpImages/Student/Polling/2.png" style="height:70%;width:70%;
-         border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
-
-        <p>On your device you will have the option to select from answers A, B, C, D, E and then submit
-                 your answer by clicking on the “submit” button.</p>
-         <div style="text-align: center"><asset:image src="HelpImages/Student/Polling/3.png" style="height:70%;width:70%;
-         border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
-        <br><hr><br>  
-
-        <a class="anchor" name="6"></a>
-
-        <h3>Take an Online Quiz (at home)</h3>
-                 <p>To enter a polling session, click on the active poll button displayed on your course landing page.</p> 
-        <div style="text-align: center"><asset:image src="HelpImages/Student/Quiz/1.png" style="height:70%;width:70%;
-         border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
-
-        <p>You will automatically be brought to the open polling session. You will see the question and along with 
-        the multiple choice answer choices; A, B, C, D, E. Select your answer choice and submit your answer by
-                 clicking on the “submit” button.</p>
-         <div style="text-align: center"><asset:image src="HelpImages/Student/Quiz/2.png" style="height:70%;width:70%;
-         border: solid;border-width:1px;border-color: #0f0f0f;"/></div>
-        <br><hr><br>
 
     </div>
 </div>
@@ -189,9 +137,9 @@ a.anchor {
 
 
 <asset:javascript src="jquery-3.2.0.min.js"/>
-<!--<script src="https://apis.google.com/js/platform.js"></script>-->
-<!--<asset:javascript src="auth/config.js"/>-->
-<!--<asset:javascript src="auth/login.js"/>-->
+<script src="https://apis.google.com/js/platform.js"></script>
+<asset:javascript src="auth/config.js"/>
+<asset:javascript src="auth/login.js"/>
 <asset:javascript src="bootstrap.min.js"/>
 
 </body>

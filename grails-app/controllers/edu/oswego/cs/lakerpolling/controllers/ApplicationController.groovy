@@ -35,6 +35,9 @@ class ApplicationController {
         }
     }
 
+    def landingPageHelpView(){
+        render(view: 'loginHelpPage')
+    }
     def helpStudentView() {
         QueryResult<AuthToken> require = hasAccess()
         if (require.success) {
@@ -45,7 +48,7 @@ class ApplicationController {
             } else if (type == RoleType.INSTRUCTOR) {
                 render(view: 'instructorHelpPage')
             }
-//            } else if (type == RoleType.ADMIN) {
+//            else if (type == RoleType.ADMIN) {
 //                render(view: 'dashboardAdmin')
 //            }
         else {

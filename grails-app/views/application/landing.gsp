@@ -52,6 +52,9 @@
                         <li><a href="https://lakerlife.oswego.edu/" target="_blank">Laker Life</a></li>
                         <li><a href="https://www.oswego.edu/myoswego/" target="_blank">My Oswego</a></li>
                     </ul>
+                    <li style="border: 0px solid #fed136">
+                    <a href="/landing/help" style="cursor: pointer">help</a>
+                </li>
                 </li>
             </ul>
 

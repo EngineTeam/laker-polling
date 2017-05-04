@@ -19,6 +19,7 @@ class UrlMappings {
         "/course/prevQuestions"(controller: 'application', action: 'inClassListView')
         "/course/quiz"(controller: 'application', action: 'quizStudentView')
         "/dashboard/help"(controller: 'application', action: 'helpStudentView')
+        "/landing/help"(controller: 'application', action: 'landingPageHelpView')
 
 
         /* end Page url mapping */
