@@ -31,7 +31,7 @@ class ApplicationController {
             }
         } else {
             session.invalidate()
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -71,10 +71,10 @@ class ApplicationController {
                     render(view: 'courseLandingInstructor')
                 }
             } else {
-                render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
+                render(view: 'dashboard')
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -83,7 +83,7 @@ class ApplicationController {
         if(require.success) {
             render(view: 'classRoster')
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -99,7 +99,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -108,7 +108,7 @@ class ApplicationController {
         if(require.success) {
             render(view: 'classAttendance')
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -124,7 +124,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -140,7 +140,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -161,7 +161,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -177,7 +177,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -194,7 +194,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
   
@@ -210,7 +210,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -225,7 +225,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 

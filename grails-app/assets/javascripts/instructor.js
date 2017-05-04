@@ -426,7 +426,6 @@ var courseId
     });
 
     $('#courseCreateCancelButton').click( function(){
-        debugger
         $('#modalCourseCRN').val("")
         $('#modalCourseName').val("")
     });
@@ -627,7 +626,7 @@ var courseId
                 var token = data.data.token
                 var sessionx = session
                 var quizId = sessionx.quizId
-                debugger
+                //debugger
                 currentInstructor = new CurrentInstructor(token)
                 $.ajax({
                     url: '/api/course',
@@ -700,17 +699,17 @@ $(function(){
 
         success: function(data){
             token = data.data.token;
-            debugger
+            //debugger
             $.ajax({
                 url: '/api/question/active?access_token=' + token + '&course_id=' + courseId,
                 type: 'GET',
                 success: function(data) {
-                    debugger
+                    //debugger
                     var str = '<a href="/course/createquestion?courseId=' + courseId + '" class="btn btn-success" role="button">View Live Question</a>'
                     document.getElementById('LiveQuestionDiv').innerHTML = str
                 },
                 error: function() {
-                    debugger
+                   // debugger
                     var str = '<a href="/course/createquestion?courseId=' + courseId + '" class="btn btn-success" role="button">Create Live Question</a>'
                     document.getElementById('LiveQuestionDiv').innerHTML = str
                 }
