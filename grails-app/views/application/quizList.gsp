@@ -93,7 +93,7 @@
                 <label class="control-label" for="startTime">Start Time</label>
                 
                 <div class="input-group clockpicker">
-                    <input id="startTime" type="text" class="form-control" value="09:30" readonly="readonly">
+                    <input id="startTime" type="text" class="form-control" value="12:00" readonly="readonly">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
@@ -109,7 +109,7 @@
                 <label class="control-label" for="endTime">End Time</label>
 
                 <div class="input-group clockpicker">
-                    <input id="endTime" type="text" class="form-control" value="09:30" readonly="readonly">
+                    <input id="endTime" type="text" class="form-control" value="12:00" readonly="readonly">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>

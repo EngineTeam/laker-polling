@@ -202,7 +202,7 @@ var courseId
                 _service.getToken((accessToken) => {
                     const tableRowHTML = "<tr><td>{{name}}</td><td>{{grade}}</td></tr>"
                     const dynamicDownloadButtonRowHTML = '<tr><td><a href="/api/quiz/file/grades?access_token={{accessToken}}&course_id=' + courseId + '">\
-                        <button class="btn btn-success" type="button">Download CSV File for the class</button>\
+                        <button class="btn btn-success" type="button">Download CSV file for the class</button>\
                     <\a></td></tr>'
                     var dynamicTableRowsHTML = ''
                     ArrayUtils.forEachCachedLength(studentGrades, (grade) => {

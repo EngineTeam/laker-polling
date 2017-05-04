@@ -136,9 +136,9 @@
                     <table id="question-table" class="table">
                         <thead>
                         <tr>
-                            <th class="col-md-1" data-field="id">#</th>
-                            <th class="col-md-1" data-field="text">Question</th>
-                            <th class="col-md-1" data-field="choices">Answers</th>
+                            <!--<th class="col-md-1" data-field="id" data-sortable="true">#</th>-->
+                            <th class="col-md-1" data-field="text" data-sortable="true">Question</th>
+                            <th class="col-md-1" data-field="choices" data-sortable="true">Answers</th>
                             <th class="col-md-1" data-field="button" data-formatter="deleteQuestionButtonFormatter"
                                 id="deleteQuestionButton">Delete</th>
                         </tr>

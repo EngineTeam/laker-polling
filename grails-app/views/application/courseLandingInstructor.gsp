@@ -61,7 +61,7 @@
     <a href="/course/createquestion?courseId=${session.courseId}" class="btn btn-success" role="button">Create Live Question</a>
 </div>
 <div class="form-group" style="text-align: center;">
-    <a href="/course/prevQuestions?courseId=${session.courseId}" class="btn btn-success" role="button">Closed Questions</a>
+    <a href="/course/prevQuestions?courseId=${session.courseId}" class="btn btn-success" role="button">Past Live Questions</a>
 </div>
 <div class="form-group" style="text-align: center;">
     <a href="/course/quizList?courseId=${session.courseId}" class="btn btn-success" role="button">At-Home Quizzes</a>

@@ -38,17 +38,19 @@ class BootStrap {
 //        max.setRole(new Role(type: RoleType.STUDENT, master: RoleType.INSTRUCTOR))
 //        max.save(flush: true)
 //
-//        User mike = new User(firstName: "Mike", lastName: "Mekker", email: "mmekker@oswego.edu", imageUrl: "http://media.salon.com/2015/01/chrissy_teigen.jpg")
-//        mike.setRole(new Role(type: RoleType.STUDENT, master: RoleType.INSTRUCTOR))
-//        mike.save(flush: true)
+//        
 //
 //        User mike2 = new User(firstName: "Mike", lastName: "Other", email: "someemail222@oswego.edu", imageUrl: "http://media.salon.com/2015/01/chrissy_teigen.jpg")
 //        mike2.setRole(new Role(type: RoleType.STUDENT, master: RoleType.INSTRUCTOR))
 //        mike2.save(flush: true)
 ////
-        User paul = new User(firstName: "Paul", lastName: "Kwoyelo", email: "pkwoyelo@oswego.edu", imageUrl: "http://media.salon.com/2015/01/chrissy_teigen.jpg")
-        paul.setRole(new Role(type: RoleType.INSTRUCTOR, master: RoleType.INSTRUCTOR))
-        paul.save(flush: true)
+		User paul = new User(firstName: "Paul", lastName: "Kwoyelo", email: "pkwoyelo@oswego.edu", imageUrl: "http://media.salon.com/2015/01/chrissy_teigen.jpg")
+		paul.setRole(new Role(type: RoleType.INSTRUCTOR, master: RoleType.INSTRUCTOR))
+		paul.save(flush: true)
+
+		User mike = new User(firstName: "Mike", lastName: "Mekker", email: "mmekker@oswego.edu", imageUrl: "http://media.salon.com/2015/01/chrissy_teigen.jpg")
+		mike.setRole(new Role(type: RoleType.STUDENT, master: RoleType.INSTRUCTOR))
+		mike.save(flush: true)
 //
 //        User brad = new User(firstName: "Brandon", lastName: "Lanthrip", email: "blanthri@oswego.edu", imageUrl: "http://media.salon.com/2015/01/chrissy_teigen.jpg")
 //        brad.setRole(new Role(type: RoleType.INSTRUCTOR, master: RoleType.INSTRUCTOR))
