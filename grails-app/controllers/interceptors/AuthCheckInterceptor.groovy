@@ -8,6 +8,10 @@ class AuthCheckInterceptor {
                 .excludes(controller: 'application', action: 'landing')
                 .excludes(controller: 'auth', action: 'auth')
                 .excludes(controller: 'auth', action: 'logout')
+                .excludes(controller: 'course')
+                .excludes(controller: 'question')
+                .excludes(controller: 'quiz')
+                .excludes(controller: 'user')
     }
 
     boolean before() {
