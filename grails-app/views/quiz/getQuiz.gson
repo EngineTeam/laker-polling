@@ -13,6 +13,6 @@ json {
     data {
         accessToken token.accessToken
         courseId courseID
-        students g.render(template: "/templates/quiz", model: [quiz: quiz])
+        quiz g.render(template: "/templates/quiz", model: [quiz: quiz])
     }
 }
