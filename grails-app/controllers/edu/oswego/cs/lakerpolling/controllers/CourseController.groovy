@@ -26,7 +26,7 @@ class CourseController {
      */
     def courseGet(String access_token, String course_id) {
         def require = preconditionService.notNull(params, ["access_token"])
-        def token = preconditionService.accessToken(access_token).data
+        def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
             QueryResult<List<Course>> result = course_id == null ?
@@ -49,19 +49,12 @@ class CourseController {
      * @param name - the name of the course being added
      * @param user_id - the user id of the instructor the course will be added to
      */
-    def postCourse(String access_token, String crn, String name, String user_id) {
+    def postCourse(String access_token, String crn, String name) {
         def require = preconditionService.notNull(params, ["access_token", "crn", "name"])
         def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
-            def adminCreate = preconditionService.notNull(params, ["user_id"])
-            def result
-            if (adminCreate.success) {
-                result = courseService.adminCreateCourse(token, crn, name, user_id)
-            } else {
-                result = courseService.instructorCreateCourse(token, crn, name)
-            }
-
+            def result = courseService.instructorCreateCourse(token, crn, name)
             if (result.success) {
                 render(view: 'newCourse', model: [course: result.data])
             } else {
@@ -80,7 +73,7 @@ class CourseController {
      */
     def deleteCourse(String access_token, String course_id) {
         def require = preconditionService.notNull(params, ["access_token", "course_id"])
-        def token = preconditionService.accessToken(access_token).data
+        def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
             def result = courseService.deleteCourse(token, course_id)
@@ -102,7 +95,7 @@ class CourseController {
 
     def getCourseStudent(String access_token, String course_id) {
         def require = preconditionService.notNull(params, ["access_token", "course_id"])
-        def token = preconditionService.accessToken(access_token).data
+        def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
             def results = courseService.getAllStudents(token, course_id)
@@ -127,7 +120,7 @@ class CourseController {
      */
     def postCourseStudent(String access_token, String course_id, String email) {
         def require = preconditionService.notNull(params, ["access_token", "course_id"])
-        def token = preconditionService.accessToken(access_token).data
+        def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
             List<String> emails = new ArrayList<>()
@@ -162,7 +155,7 @@ class CourseController {
 
     def deleteCourseStudent(String access_token, String course_id, String user_id) {
         def require = preconditionService.notNull(params, ["access_token", "course_id", "user_id"])
-        def token = preconditionService.accessToken(access_token).data
+        def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
             if (course_id.isLong()) {
@@ -195,7 +188,7 @@ class CourseController {
      */
     def getAttendance(String access_token, String course_id, String student_id, String date, String start_date, String end_date) {
         def require = preconditionService.notNull(params, ["access_token", "course_id"])
-        def token = preconditionService.accessToken(access_token).data
+        def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
             // dateRange spans either from start_date to end_date or just includes date
