@@ -38,6 +38,9 @@
                     %{--<button onclick="logout()" class="btn btn-default navbar-right navbar-btn">Logout</button>--}%
                     <a class="logout" onclick="logout()" >LogOut</a>
                 </li>
+                <li style="border: 0px solid #fed136">
+                    <a href="/dashboard/help" style="cursor: pointer">help</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -52,10 +55,10 @@
     </a>
     <h1 id="coursePageTitle" style="text-align: center;">
 
-    <div id="livePollButton" class="form-group" style="text-align: center;">
+    <div id="livePollButton" class="form-group" style="text-align: center; visibility: hidden;">
         <a href="course/answerquestion?courseId=${session.courseId}" class="btn btn-success" role="button">Answer Question</a>
     </div>
-    <div id="livePollMessage"style="text-align: center;">
+    <div id="livePollMessage"style="text-align: center; visibility: hidden;">
         <p>There are currently no active questions.</p>
     </div>
     <div class="form-group" style="text-align: center;">

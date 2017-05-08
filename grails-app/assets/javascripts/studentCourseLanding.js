@@ -12,10 +12,8 @@ $(function(){
                 type: 'GET',
                 success: function(data) {
                     document.getElementById('livePollButton').style.visibility="visible";
-                    document.getElementById('livePollMessage').style.visibility="hidden";
                 },
                 error: function() {
-                    document.getElementById('livePollButton').style.visibility="hidden";
                     document.getElementById('livePollMessage').style.visibility="visible";
                 }
             });

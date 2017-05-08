@@ -39,6 +39,9 @@
                     %{--<button onclick="logout()" class="btn btn-default navbar-right navbar-btn">Logout</button>--}%
                     <a class="logout" onclick="logout()" >LogOut</a>
                 </li>
+                <li style="border: 0px solid #fed136">
+                    <a href="/dashboard/help" style="cursor: pointer">help</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -58,7 +61,7 @@
     <a href="/course/createquestion?courseId=${session.courseId}" class="btn btn-success" role="button">Create Live Question</a>
 </div>
 <div class="form-group" style="text-align: center;">
-    <a href="/course/prevQuestions?courseId=${session.courseId}" class="btn btn-success" role="button">Closed Questions</a>
+    <a href="/course/prevQuestions?courseId=${session.courseId}" class="btn btn-success" role="button">Past Live Questions</a>
 </div>
 <div class="form-group" style="text-align: center;">
     <a href="/course/quizList?courseId=${session.courseId}" class="btn btn-success" role="button">At-Home Quizzes</a>
