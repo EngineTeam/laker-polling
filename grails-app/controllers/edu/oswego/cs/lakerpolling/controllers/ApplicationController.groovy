@@ -31,10 +31,35 @@ class ApplicationController {
             }
         } else {
             session.invalidate()
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
+    def landingPageHelpView(){
+        render(view: 'loginHelpPage')
+    }
+    def helpStudentView() {
+        QueryResult<AuthToken> require = hasAccess()
+        if (require.success) {
+            User user = require.data.user
+            RoleType type = user.role.type
+            if (type == RoleType.STUDENT) {
+                render(view: 'studHelpPage')
+            } else if (type == RoleType.INSTRUCTOR) {
+                render(view: 'instructorHelpPage')
+            }
+//            else if (type == RoleType.ADMIN) {
+//                render(view: 'dashboardAdmin')
+//            }
+        else {
+                session.invalidate()
+                redirect(controller: 'application', action: 'landing')
+            }
+        } else {
+            session.invalidate()
+            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+        }
+    }
     def courseView(long courseId) {
         QueryResult<AuthToken> require = hasAccess()
         if(require.success) {
@@ -49,10 +74,10 @@ class ApplicationController {
                     render(view: 'courseLandingInstructor')
                 }
             } else {
-                render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
+                render(view: 'dashboard')
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -61,7 +86,7 @@ class ApplicationController {
         if(require.success) {
             render(view: 'classRoster')
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -77,7 +102,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -86,7 +111,7 @@ class ApplicationController {
         if(require.success) {
             render(view: 'classAttendance')
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -102,7 +127,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -118,7 +143,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -139,7 +164,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -155,7 +180,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -172,7 +197,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
   
@@ -188,7 +213,7 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
 
@@ -203,9 +228,10 @@ class ApplicationController {
                 render(view: '../failure', model: [errorCode: preReq.errorCode, message: preReq.message])
             }
         } else {
-            render(view: '../failure', model: [errorCode: require.errorCode, message: require.message])
+            render(view: 'landing')
         }
     }
+
 
     private QueryResult<AuthToken> hasAccess() {
         String access = session.getAttribute("access")

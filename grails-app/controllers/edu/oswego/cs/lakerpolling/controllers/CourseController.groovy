@@ -49,19 +49,12 @@ class CourseController {
      * @param name - the name of the course being added
      * @param user_id - the user id of the instructor the course will be added to
      */
-    def postCourse(String access_token, String crn, String name, String user_id) {
+    def postCourse(String access_token, String crn, String name) {
         def require = preconditionService.notNull(params, ["access_token", "crn", "name"])
         def token = preconditionService.accessToken(access_token, require).data
 
         if (require.success) {
-            def adminCreate = preconditionService.notNull(params, ["user_id"])
-            def result
-            if (adminCreate.success) {
-                result = courseService.adminCreateCourse(token, crn, name, user_id)
-            } else {
-                result = courseService.instructorCreateCourse(token, crn, name)
-            }
-
+            def result = courseService.instructorCreateCourse(token, crn, name)
             if (result.success) {
                 render(view: 'newCourse', model: [course: result.data])
             } else {

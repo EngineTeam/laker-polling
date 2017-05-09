@@ -19,6 +19,7 @@
             <button type="button" onclick="logout()" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> LOGOUT <i class="fa fa-bars"></i>
             </button>
+
             <a class="navbar-brand page-scroll" href="#page-top">
                 <asset:image src="logo2.png" class="logo"/>
                 %{--<img src="logo.png" style="height: 60px !important; width: 120px !important; position: absolute; top: 0%">--}%
@@ -35,6 +36,9 @@
                 <li style="border: 1.5px solid #fed136">
                     %{--<button onclick="logout()" class="btn btn-default navbar-right navbar-btn">Logout</button>--}%
                     <a style="cursor: pointer" onclick="logout()" >LogOut</a>
+                </li>
+                <li style="border: 0px solid #fed136">
+                    <a href="/dashboard/help" style="cursor: pointer">help</a>
                 </li>
             </ul>
         </div>

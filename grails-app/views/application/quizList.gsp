@@ -43,6 +43,9 @@
                     %{--<button onclick="logout()" class="btn btn-default navbar-right navbar-btn">Logout</button>--}%
                     <a class="logout" onclick="logout()" >LogOut</a>
                 </li>
+                <li style="border: 0px solid #fed136">
+                    <a href="/dashboard/help" style="cursor: pointer">help</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -90,7 +93,7 @@
                 <label class="control-label" for="startTime">Start Time</label>
                 
                 <div class="input-group clockpicker">
-                    <input id="startTime" type="text" class="form-control" value="09:30" readonly="readonly">
+                    <input id="startTime" type="text" class="form-control" value="12:00" readonly="readonly">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
@@ -106,7 +109,7 @@
                 <label class="control-label" for="endTime">End Time</label>
 
                 <div class="input-group clockpicker">
-                    <input id="endTime" type="text" class="form-control" value="09:30" readonly="readonly">
+                    <input id="endTime" type="text" class="form-control" value="12:00" readonly="readonly">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
@@ -174,8 +177,7 @@
 
 <script type="text/javascript">
     $('.clockpicker').clockpicker({
-        autoclose: true,
-        twelvehour: true
+        autoclose: true
     });
 </script>
 

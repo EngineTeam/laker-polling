@@ -93,7 +93,7 @@ $('#newQuizButton').on('click', function(event) {
                 url: urlStr,
                 type: 'POST',
                 success: function(data) {
-                    window.location.href = "/course/createQuiz?courseId=" + courseId + "&quizId=" + data.data.students.id;
+                    window.location.href = "/course/createQuiz?courseId=" + courseId + "&quizId=" + data.data.quiz.id;
                 },
                 error: function(jqXHR, textStatus, errorMessage) {
                 console.log(startTimestamp);

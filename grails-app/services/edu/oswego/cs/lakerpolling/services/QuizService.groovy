@@ -340,7 +340,8 @@ class QuizService {
             }
         }
 
-        def totalGrade = studentAnswerList.findAll { a -> a.correct == true }.size() / quiz.questions.size()
+        def studentAnswerCount = studentAnswerList.findAll { a -> a.correct == true }.size()
+        def totalGrade = quiz.questions.size() > 0 ? studentAnswerCount / quiz.questions.size() : 1
 
         new Grade(student: token.user, grade: totalGrade, quiz: quiz).save(flush: true, failOnError: true)
         def submission = new QuizSubmission(student: token.user, quiz: quiz, timestamp: new Date()).save(flush: true, failOnError: true)

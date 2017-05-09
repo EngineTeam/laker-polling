@@ -52,6 +52,9 @@
                         <li><a href="https://lakerlife.oswego.edu/" target="_blank">Laker Life</a></li>
                         <li><a href="https://www.oswego.edu/myoswego/" target="_blank">My Oswego</a></li>
                     </ul>
+                    <li style="border: 0px solid #fed136">
+                    <a href="/landing/help" style="cursor: pointer">help</a>
+                </li>
                 </li>
             </ul>
 
@@ -91,17 +94,14 @@
 
                 <div class="clearfix"></div>
 
-                <h2 class="section-heading">What is Laker Polling</h2>
+                <h2 class="section-heading">About Laker Polling</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin ut luctus enim, quis tincidunt magna. Vivamus
-                    nec quam feugiat, iaculis ante ut, hendrerit libero.
-                    nisi. Praesent dapibus pharetra orci non luctus.
-                    Mauris finibus faucibus elit ac luctus. Nulla euismod
-                    id sapien id blandit. Donec bibendum convallis nulla,
-                    scelerisque efficitur quam iaculis volutpat.
-                    Sed sed est laoreet, tincidunt sapien non, bibendum tortor
+                    During the 2017 Spring Semester, the Software Design class from the State University
+                    of NewYork at Oswego developed an audience response system. Laker Polling is a free 
+                    web-based application that requires no Software to be downloaded. Laker Polling is an interactive
+                    component to learning that allows instructors to poll students in class at SUNY Oswego. Laker
+                    Polling is open-source and available to individuals outside of the SUNY Oswego Campus.
                 </p>
             </div>
 
@@ -110,13 +110,11 @@
 
                 <div class="clearfix"></div>
 
-                <h2 class="section-heading">What do I need to use it?</h2>
+                <h2 class="section-heading">How to use it</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc ut eros ut augue blandit lobortis sit amet at
-                    nibh. Proin sed augue nisl. Sed sagittis ut sem eget
-                    interdum. Cras nec risus vitae leo volutpat tincidunt vitae vel justo.
+                    Laker Polling's web based application allows individuals from SUNY Oswego to access it from any
+                    device with access to the internet. For more information on specific use, please browse our <a href="/landing/help" style="cursor: pointer">help document</a>
                 </p>
                 %{--<img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97200&w=250&h=250" alt="">--}%
             </div>
