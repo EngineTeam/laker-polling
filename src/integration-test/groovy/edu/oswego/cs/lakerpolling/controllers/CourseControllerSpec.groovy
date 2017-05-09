@@ -13,7 +13,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
     void "test courseGet(): Valid parameters" () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(VALID_INSTRUCTOR, VALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", VALID_COURSE.id)
@@ -34,7 +34,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
     void "test courseGet: Invalid eq classes " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(INVALID_INSTRUCTOR, INVALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", INVALID_COURSE.id)
@@ -64,7 +64,7 @@ class CourseControllerSpec extends BootStrapSpec {
      // As instructor
     void "test postCourse(): Valid parameters instructor" () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(VALID_INSTRUCTOR, VALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("crn", VALID_COURSE.crn)
@@ -125,12 +125,12 @@ class CourseControllerSpec extends BootStrapSpec {
 //      * Endpoint to perform delete operation active courses.
 //      * @param access_token - The access token of the requesting user.
 //      * @param course_id - The id of the course.
-// 		* ["access_token", "course_id"]
+//      * ["access_token", "course_id"]
 //      */
 
     void "test deleteCourse(): Valid parameters ADMIN" () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(VALID_INSTRUCTOR, VALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", VALID_COURSE.id)
@@ -164,7 +164,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
     void "test deleteCourse(): Invalid eq classes " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(INVALID_INSTRUCTOR, INVALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", INVALID_COURSE.id)
@@ -188,7 +188,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
      void "test getCourseStudent(): Valid parameters " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(VALID_INSTRUCTOR, VALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", VALID_COURSE.id)
@@ -206,7 +206,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
     void "test getCourseStudent(): Invalid eq classes " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(INVALID_INSTRUCTOR, INVALID_COURSE)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", INVALID_COURSE.id)
@@ -231,9 +231,9 @@ class CourseControllerSpec extends BootStrapSpec {
      * ["access_token", "course_id"]
     */
      
-	void "test postCourseStudent(): Valid parameters " () {
+    void "test postCourseStudent(): Valid parameters " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(VALID_INSTRUCTOR, VALID_COURSE, VALID_STUDENT)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", VALID_COURSE.id)
@@ -253,7 +253,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
     void "test postCourseStudent(): Invalid eq classes " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(INVALID_INSTRUCTOR, INVALID_COURSE, INVALID_STUDENT)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", INVALID_COURSE.id)
@@ -278,7 +278,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
      void "test deleteCourseStudent(): Valid parameters " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(VALID_INSTRUCTOR, VALID_COURSE, VALID_STUDENT)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", VALID_COURSE.id)
@@ -297,7 +297,7 @@ class CourseControllerSpec extends BootStrapSpec {
 
     void "test deleteCourseStudent(): Invalid eq classes " () {
 
-    	given: "The Following Parameters"
+        given: "The Following Parameters"
         testWith(INVALID_INSTRUCTOR, INVALID_COURSE, INVALID_STUDENT)
         Map<String, Object> params = new HashMap<>()
         params.put("course_id", INVALID_COURSE.id)
@@ -338,7 +338,7 @@ class CourseControllerSpec extends BootStrapSpec {
         then: "The Output Should Be The Following"
         response.status == 200
         response.json.status == "success"
-    	
+        
     }
 
     void "test getAttendance(): invalid eq classes " () {
